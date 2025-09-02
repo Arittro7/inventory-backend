@@ -12,7 +12,14 @@ const app = express();
 const server = http.createServer(app);
 
 // CORS config
-app.use(cors({ origin: process.env.CLIENT_URL || '*', credentials: true }));
+// app.use(cors({ origin: process.env.CLIENT_URL || '*', credentials: true }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",            
+    "https://inventoryhubit.netlify.app" 
+  ],
+  credentials: true,
+}));
 app.use(helmet());
 app.use(express.json());
 
