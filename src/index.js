@@ -32,6 +32,9 @@ app.use('/api/tags', require('./routes/tag'));
 app.use('/api/search', require('./routes/search'));
 app.use('/api/comments', require('./routes/comment'));
 
+app.use("/api/user", require("./routes/user"));      
+app.use("/api/aggregate", require("./routes/aggregate")); 
+
 
 app.use(errorHandler);
 
