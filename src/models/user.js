@@ -20,6 +20,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    
+    apiToken: {
+      type: DataTypes.STRING,
+      unique: true,
+    },
   });
   return User;
 };
